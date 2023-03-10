@@ -1,6 +1,6 @@
 :root {
-  --card-width: 600px;
-  --card-height: 1000px;
+  --card-width: 700px;
+  --card-height: 1080px;
 }
 
 * {
@@ -11,8 +11,10 @@
   list-style: none;
 }
 
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+
 html {
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Pokemon Solid", sans-serif;
 }
 
 body {
@@ -29,27 +31,8 @@ body {
   align-items: center;
 }
 
-.card {
-  position: absolute;
-  width: var(--card-width);
-  height: var(--card-height);
-  outline: 10px solid black;
-  border-radius: 50%;
-  box-shadow: 10px 10px 0px 10px black;
-  background: rgb(249, 232, 153);
-  cursor: grab;
-}
-
-.card h2 {
-  color: rgb(249, 232, 153);
-}
-
-.cardImg {
-  display: none;
-}
-
 .cardRect {
-  padding-top: 1rem;
+  padding-top: 0.6rem;
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -58,7 +41,7 @@ body {
   outline: 10px solid black;
   box-shadow: 7px 7px 0px 10px black;
   border-radius: 20px;
-  background: rgb(69, 153, 248);
+  background: rgb(201, 201, 3);
   transform: scale(0.5);
 }
 
@@ -70,44 +53,53 @@ body {
   cursor: grabbing;
 }
 
-.cardIcon {
-  top: 0;
-  left: 0;
-}
-
 .cardRect .imgCont {
-  width: calc(0.9 * var(--card-width));
+  width: calc(1 * var(--card-width));
   height: auto;
   object-fit: cover;
   overflow: hidden;
-  background: #fff;
+  background: rgb(103, 1, 1);
   border-radius: 20px 20px 0 0;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
 }
 
 .cardRect img {
-  margin-top: 1rem;
   width: 100%;
+  transform: scale(0.92);
+  background: rgb(81, 248, 81);
 }
 
 .cardRect h2 {
-  padding: 0.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: calc(0.9 * var(--card-width));
-  font-size: 3.5rem;
+  padding-bottom: 1rem;
+  width: calc(1 * var(--card-width));
+  height: 10rem;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 0.6rem;
   color: white;
-  background: rgb(0, 119, 255);
+  background: rgb(69, 153, 248);
+  text-transform: uppercase;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  text-shadow: 2px 2px 4px solid black, -2px 2px 4px solid black,
+    2px -2px 4px solid black, -2px -2px 4px solid black;
 }
 
 .cardRect p {
-  padding: 1.5rem;
-  width: calc(0.9 * var(--card-width));
-  font-size: 1.5rem;
+  padding: 1rem;
+  width: calc(1 * var(--card-width));
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: bolder;
+  letter-spacing: 0.4rem;
   text-align: justify;
   background: #fff;
   border-radius: 0 0 20px 20px;
+  font-family: "Shadows Into Light", cursive;
+  border: 4px solid black;
 }
 
 .cardRect button {
